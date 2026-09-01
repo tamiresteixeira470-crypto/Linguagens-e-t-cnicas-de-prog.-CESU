@@ -8,3 +8,6 @@ int main(int argc, char *argv[]) {
 if(letra=='a')printf("a de AMOR");
 	else if(letra=='b')printf("b de BAIXINHO");
     else if(letra=='c')printf("c de CORACAO");
+
+	return 0;
+}
