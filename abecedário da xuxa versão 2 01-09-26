@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+	char letra;
+	printf("insira uma letra ");
+	scanf("%c",&letra);
+
+	
+	switch(letra){
+		case 'a':
+		printf("a de AMOR");
+		break;
+		case 'b':
+		printf("b de BAIXINHO");
+		break;
+		case 'c':	
+		printf("c de CORACAO");
+		break;
+	}
+	
+	
+	return 0;
+}
