@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(int argc, char *argv[]) {
+	char letra;
+	printf("insira uma letra ");
+	scanf("%c",&letra);
+
+if(letra=='a')printf("a de AMOR");
+	else if(letra=='b')printf("b de BAIXINHO");
+    else if(letra=='c')printf("c de CORACAO");
