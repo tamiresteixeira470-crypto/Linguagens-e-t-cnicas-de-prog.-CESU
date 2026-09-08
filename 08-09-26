@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char *argv[]) {
+
+int digito1,digito2,digito3,digito4,digito5,digito6,digito7,digito8,digito9,digitoVer1, digitoVer2;
+scanf("%d %d %d . %d %d %d . %d %d %d - %d %d",& digito1,& digito2,& digito3, & digito4,& digito5,& digito6,& digito7,& digito8,& digito9,&digitoVer1,&digitoVer2);
+
+printf("digite seu CPF", digito1,digito2,digito3,digito4,digito5,digito6,digito7,digito8,digito9,digitoVer1, digitoVer2);
+
+int mdigito1,mdigito2,mdigito3,mdigito4,mdigito5,mdigito6,mdigito7,mdigito8,mdigito9, resto1,soma;
+
+mdigito1=digito1*10; mdigito2=digito2*9; mdigito3=digito3*8;
+mdigito4=digito4*7; mdigito5=digito5*6; mdigito6=digito6*5;
+mdigito7=digito7*4; mdigito8= digito8*3;mdigito9=digito9*2;
+
+soma= digito1+digito2+digito3+digito4+digito5+digito6+digito7+digito8+digito9;
+soma*=10;
+resto1= soma%11;
+
+if (resto1 == 10) resto1 = 0;
+
+	printf("\n %d", resto1);
+
+printf("\n%d",resto1);
+
+mdigito1=digito1*10; mdigito2=digito2*9; mdigito3=digito3*8;
+mdigito4=digito4*7; mdigito5=digito5*6; mdigito6=digito6*5;
+mdigito7=digito7*4; mdigito8= digito8*3;mdigito9=digito9*2;
+
+soma= digito1+digito2+digito3+digito4+digito5+digito6+digito7+digito8+digito9;
+soma*=10;
+resto2 = soma%11;
+
+if (resto2 == 10) resto2 = 0;
+
+	printf("\n %d", resto2);
+
+printf("\n%d",resto2);
+
+	return 0;
+}
