@@ -1,0 +1,70 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char *argv[]) {
+
+int dig1,dig2,dig3,dig4,dig5,dig6,dig7,dig8,dig9,dig10,dig11;
+int cpf[11];
+int soma1 = 0;
+int peso1=10;
+int resto1,digito1;
+int soma2 = 0;
+int peso2 = 11;
+int resto2, digito2;
+int i;
+
+printf("Insira os 11 dígitos do CPF separados por espaco:\n");
+scanf("%d %d %d %d %d %d %d %d %d %d %d", &dig1,&dig2,&dig3,&dig4,&dig5,&dig6,&dig7,&dig8,&dig9,&dig10,&dig11);
+
+cpf[0] = dig1;
+cpf[1] = dig2;
+cpf[2] = dig3;
+cpf[3] = dig4;
+cpf[4] = dig5;
+cpf[5] = dig6;
+cpf[6] = dig7;
+cpf[7] = dig8;
+cpf[8] = dig9;
+cpf[9] = dig10;
+cpf[10] = dig11;
+
+for (i= 0; i<9; i++){
+	soma1 += cpf[i]* peso1;
+	peso1 --;
+}
+resto1 = soma1 %11;
+
+if (resto1<2){
+	digito1=0;
+}
+else{
+	digito1 = 11- resto1;
+}
+
+
+
+for ( i=0; i<10;i++){
+	soma2 += cpf[i]* peso2;
+	peso2 --;
+}
+
+ resto2 = soma2 % 11;
+
+
+if (resto2<2){
+	digito2 = 0;
+}
+else{
+	digito2 = 11 - resto2;
+}
+
+if (digito1 == cpf[9] && digito2 == cpf[10]){
+	printf("CPF valido!!\n");
+}
+else{
+	printf("CPF Invalido!\n");
+}
+	return 0;
+}
