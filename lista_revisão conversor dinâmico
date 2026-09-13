@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char *argv[]) {
+
+char opcao;
+float temperatura, resultado;
+
+printf("Insira (C ou F):");
+scanf("%c", &opcao);
+printf("Insira a temperatura:");
+scanf(" %f", & temperatura);
+
+
+
+if( opcao=='c'|| opcao=='C'){
+	resultado=(temperatura* 9.0/5.0) + 32.0;
+	printf("Resultado: %.2f F\n", resultado);
+
+}
+else if (opcao=='f'|| opcao=='F'){
+	resultado= (temperatura-32.0 )*5.0/9.0;
+	printf("Resultado: %.2f C\n", resultado);
+}
+else{
+	printf("Opcao INVALIDA!!!!!!");
+}
+
+	return 0;
+}
