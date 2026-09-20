@@ -1,0 +1,57 @@
+#include <stdio.h>
+#include <math.h>
+
+#define PI 3.14159265358979323846
+
+int main() {
+    double v0, angulo_graus, angulo_rad;
+    double x = 0.0, y = 0.0;
+    double vx, vy;
+    double ax, ay;
+    double tempo = 0.0;
+    
+    // Constantes do problema
+    const double g = 9.8;
+    const double k = 0.5;
+    const double dt = 0.01; // Passo de tempo de 0.01s
+
+    // Leitura das entradas
+    printf("Digite a velocidade inicial (v0 em m/s): ");
+    scanf("%lf", &v0);
+    
+    printf("Digite o angulo de lancamento (em graus): ");
+    scanf("%lf", &angulo_graus);
+
+    // Conversao do angulo para radianos
+    angulo_rad = angulo_graus * (PI / 180.0);
+
+    // Decomposicao inicial da velocidade
+    vx = v0 * cos(angulo_rad);
+    vy = v0 * sin(angulo_rad);
+
+    // Simulação do movimento usando loop temporal
+    // O loop continua enquanto o projétil estiver acima do solo (y >= 0)
+    while (y >= 0.0) {
+        // Aceleracoes considerando gravidade e resistencia do ar (k)
+        ax = -k * vx;
+        ay = -g - (k * vy);
+
+        // Atualizacao das velocidades
+        vx += ax * dt;
+        vy += ay * dt;
+
+        // Atualizacao das posicoes
+        x += vx * dt;
+        y += vy * dt;
+
+        // Incremento do tempo
+        tempo += dt;
+    }
+
+    // Exibicao dos resultados
+    printf("\n=== RESULTADO DA TRAJETORIA (ENIAC) ===\n");
+    printf("Alcance Maximo (x): %.2lf metros\n", x);
+    printf("Tempo de Voo:       %.2lf segundos\n", tempo);
+
+    return 0;
+}
