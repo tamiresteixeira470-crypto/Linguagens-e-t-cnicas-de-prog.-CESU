@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char *argv[]) {
+
+int N;
+int horas, minutos, segundos;
+    
+scanf("%d", &N);
+horas = N / 3600;
+minutos = (N % 3600) / 60; 
+segundos = N % 60;
+
+  
+printf("%d:%d:%d\n", horas, minutos, segundos);
+ 
+return 0;
+}
