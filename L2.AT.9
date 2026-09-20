@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char *argv[]) {
+
+int tempo, velocidade;
+double litros;
+
+scanf("%d %d", &tempo, &velocidade);
+
+litros = (tempo * velocidade) / 12.0;
+  
+printf("%.3lf\n", litros);
+
+return 0;
+}
