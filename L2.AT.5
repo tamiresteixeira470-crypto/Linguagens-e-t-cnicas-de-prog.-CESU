@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char *argv[]) {
+
+double G, R;
+double p = 3.141592;
+
+printf("Digite o angulo em graus: ");
+scanf("%lf", &G);
+
+R = G * p / 180.0;
+
+printf("Angulo em radianos: %.4lf\n", R);
+
+return 0;
+}
