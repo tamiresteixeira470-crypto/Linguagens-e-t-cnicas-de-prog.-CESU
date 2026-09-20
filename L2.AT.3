@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char *argv[]) {
+
+double valor_reais, cotacao_dolar, valor_dolares;
+
+printf("Digite o valor em reais (R$): ");
+scanf("%lf", &valor_reais);
+
+printf("Digite a cotacao do dolar (US$): ");
+scanf("%lf", &cotacao_dolar);
+
+valor_dolares = valor_reais / cotacao_dolar;
+
+printf("Valor correspondente em dolares: US$ %.2lf\n", valor_dolares);
+
+return 0;
+}
