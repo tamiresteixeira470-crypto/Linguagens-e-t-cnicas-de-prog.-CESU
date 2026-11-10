@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char *argv[]) {
+
+
+	printf("---NOTA BIMESTRAL---");
+	
+	int vet[10];
+	int i, num, maior_valor;
+	
+	for (i=1; i<10;i++){
+		scanf("%d", &vet[i]);
+	}	
+	
+
+	
+	printf("qual nota deseja ver(n do aluno)?\n");
+	scanf("%d",&num);
+	printf("%d", vet[num]);
+
+
+	return 0;
+}
